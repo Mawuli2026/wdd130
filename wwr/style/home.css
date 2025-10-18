@@ -1,0 +1,218 @@
+/* =========================================
+   HOME PAGE STYLES (Responsive)
+   ========================================= */
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 700px;
+}
+
+.hero-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.btn {
+  background: var(--secondary-color);
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--accent1-color);
+}
+
+/* ABOUT PREVIEW */
+.about-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 3rem 1rem;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.btn-secondary {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.7rem 1.4rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-secondary:hover {
+  background: var(--accent2-color);
+}
+
+/* FEATURED TRIPS */
+.featured-trips {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #f7f7f7;
+}
+
+.trip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.trip-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.trip-card:hover {
+  transform: translateY(-5px);
+}
+
+.trip-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.trip-card h3 {
+  color: var(--primary-color);
+  margin: 1rem 0 0.5rem;
+}
+
+.trip-card p {
+  padding: 0 1rem 1.5rem;
+  color: #333;
+}
+
+/* NEWSLETTER */
+.newsletter {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.newsletter form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.newsletter input {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  width: 250px;
+  max-width: 100%;
+}
+
+.newsletter button {
+  padding: 0.8rem 1.5rem;
+  background: var(--secondary-color);
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background: var(--accent1-color);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+  .hero {
+    height: 400px;
+  }
+
+  .about-preview {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img img {
+    max-width: 90%;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 350px;
+  }
+
+  .hero-overlay {
+    padding: 1.5rem;
+  }
+
+  .hero-overlay h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+
+  .newsletter form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter input {
+    width: 90%;
+  }
+
+  .trip-card img {
+    height: 180px;
+  }
+}

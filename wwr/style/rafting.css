@@ -1,280 +1,250 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* CSS Variables */
 :root {
-  --primary-color: #2c3e50; /* Dark blue */
-  --secondary-color: #e74c3c; /* Red */
-  --text-color: #555; /* Dark gray */
+  --primary-color: #2c3e50;
+  --secondary-color: #e74c3c;
+  --text-color: #444;
+  --background-light: #f9f9f9;
+  --white: #fff;
 }
 
-/* Global Styles */
-body {
-  font-family: 'Roboto', sans-serif;
+/* Reset & Global Styles */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
   color: var(--text-color);
+  line-height: 1.6;
 }
 
 a {
   text-decoration: none;
 }
 
-/* Heading and Paragraph Styles */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--primary-color);
-  margin: 0;
-}
-
-p {
-  color: var(--text-color);
-  line-height: 1.6;
-}
-
-/* Social Media Links */
-.sociallinks a {
-  text-decoration: none;
-}
-
-/* Page Width */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.2rem;
 }
 
-/* Hero Container */
-.hero {
-  position: relative;
-  height: 400px;
-  background-image: url('../images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 40px;
-}
-
-.hero img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.hero h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 3em;
-  text-align: center;
-  width: 80%;
-}
-
-.hero article {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  width: 80%;
-}
-
-.hero article p {
-  float: right;
-  width: 60%;
-}
-
-.hero article img {
-  float: right;
-  width: 30%;
-  margin-left: 20px;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .hero h1 {
-    font-size: 2em;
-  }
-
-  .hero article {
-    padding: 10px;
-  }
-
-  .hero article p,
-  .hero article img {
-    width: 100%;
-    float: none;
-    margin: 0;
-  }
-}
-
-/* Header Styles */
+/* Header */
 .header {
-  margin: 1rem auto;
-  display: grid;
-  grid-template-columns: 120px 1fr 2fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  max-width: 1000px;
-  border-bottom: 1px solid #ccc;
-  color: white;
+  background-color: var(--primary-color);
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo img {
-  margin: 0 0.25rem 0 1rem;
-  width: 64px;
+  width: 80px;
   height: auto;
-  max-width: 150px;
 }
 
+/* Navigation */
 .nav {
   display: flex;
-  justify-content: flex-end;
+  gap: 1.5rem;
 }
 
 .nav a {
-  color: white;
-  margin-left: 20px;
-}
-
-/* Trip Descriptions Section Styles */
-.trip-descriptions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 40px;
-}
-
-.trip {
-  flex: 0 0 calc(33.33% - 20px);
-  margin-bottom: 20px;
-}
-
-.trip img {
-  max-width: 100%;
-}
-
-.trip h3 {
-  color: var(--primary-color);
-  margin-top: 10px;
-}
-
-/* Trip Table Section Styles */
-.trip-table {
-  margin-bottom: 40px;
-}
-
-.trip-table table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.trip-table th, .trip-table td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: left;
-}
-
-.trip-table th {
-  background-color: var(--primary-color);
-  color: white;
-}
-
-/* Footer Styles */
-footer {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-.sociallinks {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.sociallinks a {
-  margin-left: 10px;
-}
-
-.sociallinks img {
-  max-width: 30px;
-  height: auto;
-}
-
-/* Contact Page Specific Styles */
-.company-info {
-  padding: 40px 20px;
-  text-align: center;
-  background-color: #f9f9f9;
-}
-
-.company-info h2 {
-  color: var(--primary-color);
-  margin-bottom: 20px;
-}
-
-.employee-profiles {
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-}
-
-.employee-profiles .employee {
-  text-align: center;
-}
-
-.employee-profiles img {
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.contact-form {
-  padding: 40px 20px;
-  background-color: #f9f9f9;
-}
-
-.contact-form h2 {
-  color: var(--primary-color);
-  margin-bottom: 20px;
-}
-
-.contact-form form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.contact-form label {
+  color: var(--white);
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+.nav a:hover {
+  color: var(--secondary-color);
 }
 
-.contact-form input[type="checkbox"] {
-  display: inline-block;
-  width: auto;
-}
-
-.contact-form button {
-  grid-column: span 2;
-  width: 100%;
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  padding: 10px;
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: var(--white);
   cursor: pointer;
 }
 
-.contact-form button:hover {
+/* Hero Section */
+.hero {
+  background-image: url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: var(--white);
+  text-align: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
   background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #c0392b;
+}
+
+/* Newsletter Section */
+.newsletter {
+  background-color: var(--background-light);
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.newsletter input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.newsletter button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* CTA Section */
+.cta {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 3rem 0;
+}
+
+.feature {
+  background-color: var(--background-light);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer a {
+  color: var(--secondary-color);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero {
+    height: 60vh;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
 }

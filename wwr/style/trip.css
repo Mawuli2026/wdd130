@@ -1,0 +1,170 @@
+/* =========================================
+   TRIPS PAGE STYLES (Responsive Design)
+   ========================================= */
+
+.hero {
+  position: relative;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.cta-link {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+.cta-link:hover {
+  color: var(--accent1-color);
+}
+
+/* Featured Trips */
+.trip-descriptions {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.trip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.trip {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.trip:hover {
+  transform: translateY(-5px);
+}
+
+.trip img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.trip h3 {
+  color: var(--primary-color);
+  margin: 1rem 0 0.5rem;
+}
+
+.trip p {
+  padding: 0 1rem 1.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Trip Table */
+.trip-table {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  min-width: 600px;
+}
+
+th, td {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Footer Link */
+.wireframe-link {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.wireframe-link a {
+  color: var(--accent1-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.wireframe-link a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   RESPONSIVE LAYOUT
+   ========================================= */
+@media (max-width: 900px) {
+  .hero-image {
+    height: 300px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .trip img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content {
+    padding: 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .trip-grid {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    font-size: 0.9rem;
+    min-width: 100%;
+  }
+}
