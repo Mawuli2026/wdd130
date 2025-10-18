@@ -1,0 +1,156 @@
+/* =============================================
+   QUIZ PAGE STYLES — Responsive & Polished
+   ============================================= */
+
+/* Global Styles */
+:root {
+  --primary-color: #0056b3;
+  --secondary-color: #007bff;
+  --background-light: #f9f9f9;
+  --border-color: #ccc;
+  --text-color: #333;
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: var(--text-color);
+  margin: 0;
+  padding: 1.5rem;
+}
+
+/* Page Title */
+h1 {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* Quiz Form Container */
+form {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--background-light);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 1.8rem;
+}
+
+.form-group p {
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 0.6rem;
+}
+
+/* Input & Select Fields */
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Spacing Helper */
+.indent {
+  padding-bottom: 1.5rem;
+}
+
+/* Accessibility: Focus styles */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* =============================================
+   RESPONSIVE DESIGN
+   ============================================= */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  form {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 1rem;
+    border-width: 1px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  button[type="submit"] {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
